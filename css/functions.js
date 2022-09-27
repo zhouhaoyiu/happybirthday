@@ -1,8 +1,3 @@
-/*
- * http://love.hackerzhou.me
- */
-
-// variables
 var $win = $(window);
 var clientWidth = $win.width();
 var clientHeight = $win.height();
@@ -27,11 +22,11 @@ $(window).resize(function() {
 				} else {
 					progress++;
 				}
-				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
+				$ele.html(str.substring(0, progress) + (progress & 1 ? '' : ''));
 				if (progress >= str.length) {
 					clearInterval(timer);
 				}
-			}, 75);
+			}, 25);
 		});
 		return this;
 	};

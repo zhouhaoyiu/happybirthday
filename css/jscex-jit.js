@@ -22,12 +22,7 @@
                 '\\': '\\\\'
             }
             
-            return function (s) {
-                // If the string contains no control characters, no quote characters, and no
-                // backslash characters, then we can safely slap some quotes around it.
-                // Otherwise we must also replace the offending characters with safe escape
-                // sequences.
-
+            return function (s) { 
                 escapable.lastIndex = 0;
                 return escapable.test(s) ? '"' + s.replace(escapable, function (a) {
                     var c = meta[a];
